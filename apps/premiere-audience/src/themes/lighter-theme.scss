@@ -1,0 +1,9 @@
+$prs-light-primary: mat-palette($mat-grey, 200, 500, 300);
+$prs-light-accent: mat-palette($mat-brown, 200);
+$prs-light-warn: mat-palette($mat-deep-orange, 200);
+
+$prs-light-theme: mat-light-theme(
+  $prs-light-primary,
+  $prs-light-accent,
+  $prs-light-warn
+);
