@@ -6,8 +6,6 @@ import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
 
 import { SharedMaterialModulesModule } from '@suite/shared-material-modules';
-import { AudienceLayoutModule } from '@suite/audience-layout';
-import { AudienceUiModule } from '@suite/audience-ui';
 
 import { AppComponent } from './app.component';
 

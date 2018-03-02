@@ -77,18 +77,6 @@
       }
     },
     {
-      "name": "audience-layout",
-      "root": "libs/audience-layout/src",
-      "test": "../../../test.js",
-      "appRoot": ""
-    },
-    {
-      "name": "audience-ui",
-      "root": "libs/audience-ui/src",
-      "test": "../../../test.js",
-      "appRoot": ""
-    },
-    {
       "name": "premiere-auth",
       "root": "libs/premiere-auth/src",
       "test": "../../../test.js",
