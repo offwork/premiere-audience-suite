@@ -5,11 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { SharedMaterialModulesModule } from '@suite/shared-material-modules';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-
-    SharedMaterialModulesModule,
-  ]
+  imports: [CommonModule, FormsModule, SharedMaterialModulesModule]
 })
 export class AudienceUiModule {}

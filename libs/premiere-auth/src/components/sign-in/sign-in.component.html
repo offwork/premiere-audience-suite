@@ -1,0 +1,36 @@
+<div class="example-container">
+  <mat-card>
+    <!-- <div class="card-haed"> -->
+    <mat-card-header>
+      <div class="card-haed-content">
+          <div mat-card-avatar class="example-header-image"></div>
+          <h2>Sign In</h2>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Enter your email" [formControl]="email" required>
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="email.invalid">{{getErrorMassages()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+      <form>
+          <mat-checkbox>Stay signed in!</mat-checkbox>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Sign In</button>
+    </mat-card-actions>
+    <mat-card-footer>
+        <div class="footer-row">
+          <span class="spacer"></span>
+          <button mat-button color="primary">Sign Up</button>
+          <button mat-button color="accent">Forgot your password?</button>
+          <span class="spacer"></span>
+        </div>
+    </mat-card-footer>
+  </mat-card>
+</div>

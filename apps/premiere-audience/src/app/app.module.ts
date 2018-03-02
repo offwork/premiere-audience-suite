@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -10,6 +9,8 @@ import { SharedMaterialModulesModule } from '@suite/shared-material-modules';
 import { AudienceLayoutModule } from '@suite/audience-layout';
 import { AudienceUiModule } from '@suite/audience-ui';
 
+import { AppComponent } from './app.component';
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -18,7 +19,9 @@ import { AudienceUiModule } from '@suite/audience-ui';
     FormsModule,
     ReactiveFormsModule,
     SharedMaterialModulesModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    RouterModule.forRoot([{ path: '', loadChildren: '@suite/premiere-auth#PremiereAuthModule' }], {
+      initialNavigation: 'enabled'
+    })
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

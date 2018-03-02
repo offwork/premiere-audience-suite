@@ -89,6 +89,12 @@
       "appRoot": ""
     },
     {
+      "name": "premiere-auth",
+      "root": "libs/premiere-auth/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
       "name": "shared-material-modules",
       "root": "libs/shared-material-modules/src",
       "test": "../../../test.js",

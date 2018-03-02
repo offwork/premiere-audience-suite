@@ -37,7 +37,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatMenuModule,
     MatIconModule,
     MatTooltipModule,
-    MatFormFieldModule,
+    MatFormFieldModule
   ],
   exports: [
     CommonModule,
@@ -57,7 +57,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatMenuModule,
     MatIconModule,
     MatTooltipModule,
-    MatFormFieldModule,
+    MatFormFieldModule
   ]
 })
 export class SharedMaterialModulesModule {}
