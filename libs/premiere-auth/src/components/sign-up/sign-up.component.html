@@ -1,3 +1,33 @@
-<p>
-  sign-up works!
-</p>
+<div class="login-card-container">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="card-brand-image"></div>
+      <div class="mat-display-2">Sign Up</div>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <input matInput placeholder="Full Name" [formControl]="name" required>
+          <mat-icon matSuffix>account_box</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Email" [formControl]="email" required>
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-error *ngIf="email.invalid">{{getErrorMassages()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Create password" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Sign Up</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <span class="row-spacer"></span>
+      <button mat-button color="primary" [routerLink]="['/', 'sign-in']">Sign In</button>
+      <span class="row-spacer"></span>
+    </mat-card-footer>
+  </mat-card>
+</div>

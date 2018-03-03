@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
@@ -31,6 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatProgressSpinnerModule,
     MatChipsModule,
     MatCardModule,
+    MatDividerModule,
     MatSidenavModule,
     MatCheckboxModule,
     MatListModule,
