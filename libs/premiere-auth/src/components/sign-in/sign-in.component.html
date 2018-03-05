@@ -8,24 +8,32 @@
       <form>
         <mat-form-field>
           <input matInput placeholder="Enter your email" [formControl]="email" required>
-          <mat-icon matSuffix>email</mat-icon>
+          <mat-icon matSuffix color="primary">email</mat-icon>
           <mat-error *ngIf="email.invalid">{{getErrorMassages()}}</mat-error>
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          <mat-icon matSuffix color="primary" (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
-        <mat-checkbox>Stay signed in!</mat-checkbox>
+        <div class="card-content-wraper">
+          <mat-checkbox>Stay signed in!</mat-checkbox>
+          <a class="caption" [routerLink]="['/', 'forgot-password']">Forgot your password?</a>
+        </div>
       </form>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary">Sign In</button>
     </mat-card-actions>
     <mat-card-footer>
-      <span class="row-spacer"></span>
+      <label class="body-2">Need an account?</label>
       <button mat-button color="primary" [routerLink]="['/', 'sign-up']">Sign Up</button>
-      <button mat-button color="accent" [routerLink]="['/', 'forgot-password']">Forgot your password?</button>
-      <span class="row-spacer"></span>
     </mat-card-footer>
   </mat-card>
+  <div class="login-footer">
+    <ul class="footer-links">
+      <li><a href="javascript:void(0);">Terms of Use</a></li>
+      <li><a href="javascript:void(0);">Help</a></li>
+      <li><a href="javascript:void(0);">Privacy Policy</a></li>
+    </ul>
+  </div>
 </div>

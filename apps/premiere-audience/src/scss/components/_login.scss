@@ -24,9 +24,18 @@
         }
 
         mat-card-content {
+            &.mat-card-content {
+                margin-bottom: 32px;
+            }
             form {
                 display: flex;
                 flex-direction: column;
+            }
+            & .card-content-wraper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
             }
         }
 
@@ -42,27 +51,28 @@
             border-top: 1px solid rgba($color: #000000, $alpha: .12);
             &.mat-card-footer {
                 display: flex;
-                flex-direction: row;
+                flex-wrap: wrap;
                 align-items: center;
-                @media screen and(max-width: $break-footer-small) {
-                    flex-direction: column;
-                    align-items: center;
-                }
+                justify-content: center;
             }
         }
     }
 
-    & .row-spacer {
-        flex: 1 1 auto;
+    a {
+        text-decoration: none;
+        color: #283593;
+        font: -webkit-small-control;
     }
 
     & .mat-display-2 {
         margin: 0;
+        text-align: center;
     }
 
     & .mat-h3 {
         color: #9e9e9e;
         margin: 16px 0 0 0;
+        text-align: center;
     }
 
     & .mat-card-avatar {
@@ -73,5 +83,27 @@
     & .card-brand-image {
         background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
         background-size: cover;
+    }
+
+    & .login-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        & .footer-links {
+            display: flex;
+            margin: 64px 0 0 0;
+            li {
+                &:not(:last-of-type) {
+                    position: relative;
+                    margin: 0 20px 0 0;
+                    &:after {
+                        content: "\00b0";
+                        position: absolute;
+                        top: 4px;
+                        right: -12px;
+                    }
+                }
+            }
+        }
     }
 }
