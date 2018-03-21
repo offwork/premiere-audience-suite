@@ -1,5 +1,5 @@
-$prs-primary: mat-palette($mat-indigo, 800, 300, 900);
-$prs-accent: mat-palette($mat-light-blue);
-$prs-warn: mat-palette($mat-deep-orange, A200);
+$prs-primary: mat-palette($mat-brown, 700, 300, 900);
+$prs-accent: mat-palette($mat-amber, 500);
+$prs-warn: mat-palette($mat-red, 600);
 
 $prs-theme: mat-light-theme($prs-primary, $prs-accent, $prs-warn);

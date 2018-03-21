@@ -7,7 +7,13 @@ import { RouterModule } from '@angular/router';
 
 import { SharedMaterialModulesModule } from '@suite/shared-material-modules';
 
+import { PremiereLayoutModule } from '@suite/premiere-layout';
+import { PremiereUiModule } from '@suite/premiere-ui';
+import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RouterComponent } from './components/router/router.component';
 
 @NgModule({
   imports: [
@@ -17,11 +23,11 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     SharedMaterialModulesModule,
-    RouterModule.forRoot([{ path: '', loadChildren: '@suite/premiere-auth#PremiereAuthModule' }], {
-      initialNavigation: 'enabled'
-    })
+    PremiereLayoutModule,
+    PremiereUiModule,
+    AppRoutingModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, NotFoundComponent, RouterComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -11,22 +11,30 @@
 @import 'themes/lighter.scss';
 @import 'themes/darker.scss';
 
+@import 'components/not-found.scss';
 @import 'components/login.scss';
+
+@mixin custom-components-theme($theme) {
+  @include not-found-theme($theme);
+}
 
 .app-default-theme {
     @include angular-material-theme($prs-theme);
+    @include custom-components-theme($prs-theme);
 }
 
 .app-ligth-theme {
     @include angular-material-theme($prs-light-theme);
+    @include custom-components-theme($prs-light-theme);
 }
 
 .app-dark-theme {
     @include angular-material-theme($prs-black-theme);
+    @include custom-components-theme($prs-black-theme);
 }
 
 body {
-    font-family: 'Roboto, "Helvetica Neue", sans-serif';
+    font-family: "Roboto", sans-serif;
     // Helps fonts on OSX looks more consistent with other systems
     // Isn't currently in button styles due to performance concerns
     * {

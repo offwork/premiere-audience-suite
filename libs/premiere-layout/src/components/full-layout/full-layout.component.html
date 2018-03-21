@@ -1,0 +1,18 @@
+<mat-sidenav-container class="layout-container">
+    <mat-sidenav #sidenav [mode]="mode.value">
+        <p><button mat-button (click)="sidenav.toggle();">Toggle</button></p>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">          
+            <mat-toolbar-row>
+                <button mat-icon-button (click)="sidenav.toggle();">
+                    <mat-icon class="mat-18">menu</mat-icon>
+                </button>
+                <span>Premiere Audience</span>
+                <span class="example-spacer"></span>
+                <mat-icon class="example-icon">account_circle</mat-icon>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

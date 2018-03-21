@@ -11,9 +11,9 @@ export const routes: Routes = [
   {
     path: '',
     children: [
-        { path: 'sign-in', component: SignInComponent },
-        { path: 'sign-up', component: SignUpComponent },
-        { path: 'forgot-password', component: ForgotPasswordComponent }
+      { path: 'sign-in', component: SignInComponent },
+      { path: 'sign-up', component: SignUpComponent },
+      { path: 'forgot-password', component: ForgotPasswordComponent }
     ]
   }
 ];

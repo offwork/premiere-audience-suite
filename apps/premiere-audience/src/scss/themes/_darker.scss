@@ -2,8 +2,4 @@ $prs-black-primary: mat-palette($mat-grey, 900, 500, 900);
 $prs-black-accent: mat-palette($mat-green, A200);
 $prs-black-warn: mat-palette($mat-red, A200);
 
-$prs-black-theme: mat-dark-theme(
-  $prs-black-primary,
-  $prs-black-accent,
-  $prs-black-warn
-);
+$prs-black-theme: mat-dark-theme($prs-black-primary, $prs-black-accent, $prs-black-warn);

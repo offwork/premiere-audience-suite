@@ -83,6 +83,18 @@
       "appRoot": ""
     },
     {
+      "name": "premiere-layout",
+      "root": "libs/premiere-layout/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "premiere-ui",
+      "root": "libs/premiere-ui/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
       "name": "shared-material-modules",
       "root": "libs/shared-material-modules/src",
       "test": "../../../test.js",

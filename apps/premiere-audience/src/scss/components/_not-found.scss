@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+
+@mixin not-found-theme($theme) {
+    $primary: map-get($theme, primary );
+    $accent: map-get($theme, accent );
+    $foreground: map-get($theme, foreground );
+    $background: map-get($theme, background );
+
+    not-found {
+        .not-found-container {
+            mat-card {
+                color: mat-color($primary, '500-contrast');
+                background-color: mat-color($accent, '400-contrast');
+            }
+        }
+    }
+}
